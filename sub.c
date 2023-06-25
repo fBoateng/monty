@@ -1,14 +1,14 @@
 #include "monty.h"
 /**
-  *f_sub-A sustration
-  *@head:this is a stack head
-  *@counter:a line_number
-  *Return: nothing return
+  *f_sub-sustration
+  *@head: stack head
+  *@counter: line_number
+  *Return: return no
  */
 void f_sub(stack_t **head, unsigned int counter)
-
+{
 	stack_t *aux;
-	int s, nodes;
+	int sus, nodes;
 
 	aux = *head;
 	for (nodes = 0; aux != NULL; nodes++)
@@ -22,8 +22,9 @@ void f_sub(stack_t **head, unsigned int counter)
 		exit(EXIT_FAILURE);
 	}
 	aux = *head;
-	s = aux->next->n - aux->n;
-	aux->next->n = s;
+	sus = aux->next->n - aux->n;
+	aux->next->n = sus;
 	*head = aux->next;
 	free(aux);
+}
 
